@@ -1,142 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body>
 
-  <!-- Cart Page starts here -->
-  <section class="cart py-5 my-5" id="cart">
-    <div class="container">
-      <div class="section_title text-center mb-5">
-        <h1 class="text-capitalize">Cart</h1>
-      </div>
-      <div class="row bg_cart_1 rounded">
-        <div class="col-md-8 border-right">
-          <div class="mb-3">
-            <div class="pt-4">
-              <h5 class="mb-4">Cart (<span>2</span> items)</h5>
-              <div class="row mb-4">
-                <div class="col-md-5 col-lg-3 col-xl-3">
-                  <div class="rounded mb-3 mb-md-0">
-                    <img class="img-fluid w-100 rounded" src="images/bluedenim.jpg" alt="Sample">
-                  </div>
-                </div>
-                <div class="col-md-7 col-lg-9 col-xl-9">
-                  <div>
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <h5>Blue denim shirt</h5>
-                        <p class="mb-3 text-muted text-uppercase small">Shirt - blue</p>
-                        <p class="mb-2 text-muted text-uppercase small">Color: blue</p>
-                        <p class="mb-3 text-muted text-uppercase small">Size: M</p>
-                      </div>
-                      <div>
-                        <div class="mb-0 w-100">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-sm btn-outline-primary">
-                            <i class="fas fa-minus"></i>
-                          </button>
-                          <input class="quantity text-center" min="0" max="10" name="quantity" value="1" type="number">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-sm btn-outline-primary">
-                            <i class="fas fa-plus"></i>
-                          </button>
-                        </div>
-                        <small class="form-text text-muted text-center">(Note, 1 piece)</small>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div>
-                        <a href="javascript:;" type="button" class="small text-uppercase mr-3">
-                          <i class="fas fa-trash-alt mr-1"></i> Remove item
-                        </a>
-                      </div>
-                      <p class="mb-0"><span><strong id="summary">₹1799</strong></span></p class="mb-0">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr class="mb-4">
-              <div class="row mb-4">
-                <div class="col-md-5 col-lg-3 col-xl-3">
-                  <div class="rounded mb-3 mb-md-0">
-                    <img class="img-fluid w-100 rounded" src="images/redhoodie.jpg" alt="Sample">
-                  </div>
-                </div>
-                <div class="col-md-7 col-lg-9 col-xl-9">
-                  <div>
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <h5>Red hoodie</h5>
-                        <p class="mb-3 text-muted text-uppercase small">Shirt - red</p>
-                        <p class="mb-2 text-muted text-uppercase small">Color: red</p>
-                        <p class="mb-3 text-muted text-uppercase small">Size: M</p>
-                      </div>
-                      <div>
-                        <div class="mb-0 w-100">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-sm btn-outline-primary">
-                            <i class="fas fa-minus"></i>
-                          </button>
-                          <input class="quantity text-center" min="0" max="10" name="quantity" value="1" type="number">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-sm btn-outline-primary">
-                            <i class="fas fa-plus"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div>
-                        <a href="javascript:;" type="button" class="card-link-secondary small text-uppercase mr-3">
-                          <i class="fas fa-trash-alt mr-1"></i> Remove item
-                        </a>
-                      </div>
-                      <p class="mb-0"><span><strong>₹3599</strong></span></p class="mb-0">
-                    </div>
-                  </div>
-                </div>
-              </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom styles for the cart page */
+        .cart-section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .cart-title {
+            margin-bottom: 30px;
+        }
+
+        .cart-item {
+            margin-bottom: 20px;
+        }
+
+        .item-details {
+            padding-left: 15px;
+        }
+
+        .item-img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .quantity-btn {
+            border: 1px solid #007bff;
+            color: #007bff;
+        }
+
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+
+        .remove-link {
+            color: red;
+        }
+
+        .total-amount {
+            font-weight: bold;
+        }
+
+        .checkout-btn {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cart Section -->
+    <section class="cart-section" id="cart">
+        <div class="container">
+            <div class="text-center cart-title">
+                <h1>Cart</h1>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 rounded">
-          <div class="mb-3">
-            <div class="pt-4">
-              <h5 class="mb-3">Order summary</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
-                  <span>Product name 1</span>
-                  <span>x2</span>
-                  <span>₹2598</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
-                  <span>Product name 2</span>
-                  <span>x2</span>
-                  <span>₹2598</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center border-top px-0 mb-3">
-                  <div>
-                    <strong>Total amount</strong>
-                    <strong>
-                      <p class="mb-0">(including VAT)</p>
-                    </strong>
-                  </div>
-                  <span><strong>₹5398</strong></span>
-                </li>
-              </ul>
-              <a href="checkout.html" class="btn btn-primary btn-block">Go to Checkout</a>
+            <div class="row bg-light rounded">
+                <div class="col-md-8 border-right">
+                    <h5 class="mb-4">Cart (2 items)</h5>
+
+                    <!-- First Product -->
+                    <div class="row cart-item">
+                        <div class="col-md-3">
+                            <img class="item-img" src="images/bluedenim.jpg" alt="Blue denim shirt">
+                        </div>
+                        <div class="col-md-9 item-details">
+                            <h5>Blue denim shirt</h5>
+                            <p class="text-muted small">Color: blue | Size: M</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <button class="btn btn-sm quantity-btn" onclick="this.nextElementSibling.stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input class="quantity-input mx-2" min="0" max="10" value="1" type="number">
+                                <button class="btn btn-sm quantity-btn" onclick="this.previousElementSibling.stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="remove-link">
+                                    <i class="fas fa-trash-alt"></i> Remove item
+                                </a>
+                                <p class="mb-0"><strong>₹1799</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- Second Product -->
+                    <div class="row cart-item">
+                        <div class="col-md-3">
+                            <img class="item-img" src="images/redhoodie.jpg" alt="Red hoodie">
+                        </div>
+                        <div class="col-md-9 item-details">
+                            <h5>Red hoodie</h5>
+                            <p class="text-muted small">Color: red | Size: M</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <button class="btn btn-sm quantity-btn" onclick="this.nextElementSibling.stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input class="quantity-input mx-2" min="0" max="10" value="1" type="number">
+                                <button class="btn btn-sm quantity-btn" onclick="this.previousElementSibling.stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="remove-link">
+                                    <i class="fas fa-trash-alt"></i> Remove item
+                                </a>
+                                <p class="mb-0"><strong>₹3599</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 rounded">
+                    <div class="p-3">
+                        <h5 class="mb-3">Order summary</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Blue denim shirt</span>
+                                <span>x1</span>
+                                <span>₹1799</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Red hoodie</span>
+                                <span>x1</span>
+                                <span>₹3599</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-top mt-3">
+                                <div>
+                                    <strong>Total amount</strong>
+                                    <p class="mb-0">(including VAT)</p>
+                                </div>
+                                <span class="total-amount">₹5398</span>
+                            </li>
+                        </ul>
+                        <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- ==============cart ends here============== -->
+    </section>
 </body>
 
 </html>
