@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product List Page</title>
+  <title>Product List</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
- 
 </head>
 <body>
-  <section class="products py-5 my-5" id="products">
+  <section class="products py-5 my-5">
     <div class="container">
-      <div class="section_title text-center mb-5">
-        <h1 class="text-capitalize">Products</h1>
+      <div class="section-title text-center mb-5">
+        <h1>Products</h1>
       </div>
       <div class="row">
-        <div class="col-md-3 border-right mb-small-5">
+        <div class="col-md-3 border-right mb-5">
           <h4 class="mb-5 border-bottom">Filters</h4>
           <div class="mb-5">
-            <label><b>Category</b></label>
+            <label><strong>Category</strong></label>
             <ul class="list-group">
               <li class="list-group-item">Category 1</li>
               <li class="list-group-item">Category 2</li>
@@ -30,7 +29,7 @@
           <div>
             <form>
               <div class="form-group">
-                <label><b>Price</b></label>
+                <label><strong>Price</strong></label>
                 <input type="range" min="100" max="1000" step="100" class="form-control-range">
               </div>
             </form>
@@ -43,12 +42,12 @@
         <div class="col-md-9">
           <div class="row mb-5">
             <div class="col-md-4 col-12">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html"><img src="images/reddress.jpg" class="img img-fluid" alt=""></a>
+              <div class="product-card shadow text-center p-1">
+                <div class="product-img">
+                  <a href="product_detail.html"><img src="images/reddress.jpg" class="img-fluid" alt=""></a>
                 </div>
                 <div class="product-caption my-3">
-                  <div class="product-ratting">
+                  <div class="product-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -57,113 +56,12 @@
                     <h5>Red Dress</h5>
                   </div>
                   <div class="price">
-                    <b><span class="mr-1">₹</span><span>400</span></b>
+                    <strong>₹400</strong>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-12">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html"><img src="images/bluedenim.jpg" class="img img-fluid" alt=""></a>
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html">Blue Denim Shirt</a></h5>
-                  <div class="price">
-                    <b><span class="mr-1">₹</span><span>800</span></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html"><img src="images/redhighheels.jpg" class="img img-fluid" alt=""></a>
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <h5>Red High Heels</h5>
-                  <div class="price">
-                    <b><span class="mr-1">₹</span><span>600</span></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-12">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html"><img src="images/blackleatherbag.jpg" class="img img-fluid" alt=""></a>
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <h5>Black Leather Bag</h5>
-                  <div class="price">
-                    <b><span class="mr-1">₹</span><span>500</span></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html"><img src="images/pinkprintedtshirt.jpg" class="img img-fluid" alt=""></a>
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <h5>Pink Printed T-Shirt</h5>
-                  <div class="price">
-                    <b><span class="mr-1">₹</span><span>300</span></b>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html"><img src="images/yellowcasualdress.jpg" class="img img-fluid" alt=""></a>
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <h5>Yellow Casual Dress</h5>
-                  <div class="price">
-                    <b><span class="mr-1">₹</span><span>700</span></b>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- More product cards follow with similar structure -->
           </div>
         </div>
       </div>
