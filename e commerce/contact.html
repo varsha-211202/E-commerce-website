@@ -3,54 +3,62 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
   <style>
-    .section_title {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-section {
+      padding: 50px 0;
+    }
+
+    .contact-title {
       color: #333;
       font-size: 24px;
       margin-bottom: 20px;
-    }
-
-    .border {
-      border: 2px solid #00c853;
-    }
-
-    .rounded {
-      border-radius: 10px;
-    }
-
-    .shadow {
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .text-center {
       text-align: center;
     }
 
-    .p-3 {
+    .contact-info {
+      border: 2px solid #00c853;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       padding: 15px;
-    }
-
-    .mb-4 {
       margin-bottom: 20px;
     }
 
-    .fa-3x {
-      font-size: 3rem;
+    .contact-info h3 {
+      font-size: 20px;
     }
 
-    .text-primary {
-      color: #007bff;
+    .contact-info p {
+      margin: 10px 0;
     }
 
-    .form-group {
+    .contact-form {
+      border: 2px solid #00c853;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .contact-form h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-form .form-group {
       margin-bottom: 20px;
     }
 
-    .form-control {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 10px;
       font-size: 16px;
@@ -58,27 +66,26 @@
       border-radius: 4px;
     }
 
-    .btn-primary {
+    .contact-form button {
       background-color: #007bff;
       color: #fff;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
 
-  <section class="contact py-5 my-5" id="contact">
+  <section class="contact-section py-5 my-5" id="contact">
     <div class="container">
-      <div class="section_title text-center mb-5">
-        <h1 class="text-capitalize">Contact Us</h1>
-      </div>
+      <h1 class="contact-title">Contact Us</h1>
       <div class="row mb-5">
         <div class="col-md-4 col-12">
-          <div class="border border-success rounded shadow text-center p-3">
+          <div class="contact-info">
             <div class="mb-4">
               <i class="fas fa-phone-alt fa-3x"></i>
             </div>
@@ -89,7 +96,7 @@
           </div>
         </div>
         <div class="col-md-4 col-12">
-          <div class="border border-success rounded shadow text-center p-3">
+          <div class="contact-info">
             <div class="mb-4">
               <i class="fas fa-envelope-open fa-3x"></i>
             </div>
@@ -100,7 +107,7 @@
           </div>
         </div>
         <div class="col-md-4 col-12">
-          <div class="border border-success rounded shadow text-center p-3">
+          <div class="contact-info">
             <div class="mb-4">
               <i class="far fa-life-ring fa-3x"></i>
             </div>
@@ -112,22 +119,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-8 col-10 mx-auto mb-3 my-5 py-5 border shadow">
-          <h3 class="text-center mb-3">Form</h3>
+        <div class="col-md-8 col-10 mx-auto mb-3 my-5 py-5 border contact-form">
+          <h3>Form</h3>
           <form action="contact.html" method="POST" id="form">
             <div class="form-group">
               <label for="name">Name</label>
-              <input name="name" id="name" type="text" placeholder="Name" class="form-control">
+              <input name="name" id="name" type="text" placeholder="Name">
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
-              <input name="email" id="email" type="email" placeholder="Email" class="form-control">
+              <input name="email" id="email" type="email" placeholder="Email">
             </div>
             <div class="form-group">
               <label for="msg">Message</label>
-              <textarea name="msg" id="msg" class="form-control" placeholder="Message"></textarea>
+              <textarea name="msg" id="msg" placeholder="Message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>
